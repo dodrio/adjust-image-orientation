@@ -1,0 +1,45 @@
+{
+  "name": "adjust-image-orientation",
+  "version": "0.0.0",
+  "description": "Adjust image&#39;s orientation according EXIF information.",
+  "license": "MIT",
+  "repository": "m31271n/adjust-image-orientation",
+  "author": {
+    "name": "m31271n",
+    "email": "m31271n@gmail.com",
+    "url": "stack.m31271n.com"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "lint": "eslint **/*.js",
+    "test": "ava",
+    "code-quality": "npm run lint && npm run test"
+  },
+  "files": ["src/"],
+  "main": "src/index.js",
+  "keywords": [""],
+  "dependencies": {
+    "blueimp-canvas-to-blob": "^3.14.0",
+    "exif-js": "^2.3.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-ava": "^4.5.1",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.11.1"
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.{json,md}": ["prettier --write", "git add"],
+      "**/*.js": ["prettier --write", "eslint", "git add"]
+    }
+  }
+}
