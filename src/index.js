@@ -51,7 +51,7 @@ export default function adjustImageOrientation(file, mimeType = 'image/png') {
             ctx.transform(0, -1, 1, 0, 0, width);
             break;
           default:
-            // ctx.transform(1, 0, 0, 1, 0, 0);
+            ctx.transform(1, 0, 0, 1, 0, 0);
             break;
         }
 
